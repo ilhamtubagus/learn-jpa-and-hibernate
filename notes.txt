@@ -1,0 +1,25 @@
+JDBC
+- Write a lot of SQL queries (delete from A where id=?)
+- Write a lot of Java code
+
+Spring JDBC
+- Write a lot of SQL queries but lesser Java code
+
+JPA
+- Uses EntityManager to invoke underlying SQL query
+- Map entities to tables
+
+Spring Data JPA
+- Make JPA even more simple by utilizing interface
+- We can create custom methods
+
+JPA defines the specification. It is an API
+- How do you define entities?
+- How do you map attributes?
+- Who manages the entity?
+
+Hibernate - one of the popular implementations of JPA
+
+In the code we do not use @Entity, @Repository, and etc
+directly imported from hibernate because we don't want to locked in to hibernate.
+There are other JPA implementations like Toplink
