@@ -28,11 +28,19 @@ public class CourseCommandLineRunner implements CommandLineRunner {
 
         this.repository.save(new Course(1, "Learn AWS", "Ilham"));
         this.repository.save(new Course(2, "Learn GCP", "Ilham"));
-        this.repository.save(new Course(3, "Learn Java", "Ilham"));
+        this.repository.save(new Course(3, "Learn Java", "Samidi"));
 
         this.repository.deleteById(2L);
 
         System.out.println(this.repository.findById(1L));
         System.out.println(this.repository.findById(3L));
+
+        System.out.println(this.repository.findAll());
+        System.out.println(this.repository.count());
+
+        System.out.println(this.repository.findByAuthor("Ilham"));
+        System.out.println(this.repository.findByAuthor(""));
+
+        System.out.println(this.repository.findByName("Learn AWS"));
     }
 }
